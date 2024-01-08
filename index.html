@@ -11,21 +11,28 @@
   </head>
   <body>
     <section>
-      <h1 class="title">Understanding A11y in Forms</h1>
+      <h1 id="a11y-issues-form-title" class="title">
+        Understanding A11y in Forms
+      </h1>
       <p id="description">
         Please let us know how we can support you with a11y issues.
       </p>
 
-      <form for="title">
+      <form aria-labelledby="a11y-issues-form-title" for="title">
         <fieldset>
           <legend>Enter your information</legend>
-          <label aria-describedby="name-input">Name:</label>
-          <input id="name-Input" type="text" name="name" />
-          <label aria-describedby="age-input">Age:</label>
-          <input id="age-Input" type="text" name="age" />
-          <label aria-describedby="color-input">Color you cannot see:</label>
-          <input id="color-Input" type="color" name="color" />
-          <textarea rows="7" placeholder="Leave us a message..."></textarea>
+          <label for="name" aria-describedby="name">Name:</label>
+          <input id="name" type="text" name="name" />
+          <label for="age-input" aria-describedby="age-input">Age:</label>
+          <input id="age-input" type="text" name="age-input" />
+          <label for="color-input" aria-describedby="color-input"
+            >Color you cannot see:</label
+          >
+          <input id="color-input" type="color" name="color-input" />
+          <label for="text-message-input" aria-describedby="text-message-input"
+            >Leave us a message ...</label
+          >
+          <textarea id="text-message-input" rows="7"> </textarea>
           <button type="submit">Submit</button>
         </fieldset>
       </form>
